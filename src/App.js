@@ -1,16 +1,19 @@
 import React from 'react';
-import './App.css';
+import appStyles from './App.module.css';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
+import Projects from './components/Projects';
 
 function App() {
   return (
-    <div className="App">
+    <div className={appStyles.app}>
       <Landing/>
+      <div className={appStyles.san_francisco_img}/>
       <div>
         <AboutMe/>
+        <Projects/>
       </div>
-      <span role="img" alt="finger-pointing-down" aria-label="hidden" className="expandIcon">👇</span>
+      <span role="img" alt="finger-pointing-down" aria-label="hidden" className={appStyles.finger_animation}>👇</span>
     </div>
   );
 }

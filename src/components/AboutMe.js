@@ -4,12 +4,9 @@ import aboutMeStyles from '../styles/AboutMe.module.css'
 const AboutMe = () => {
   return (
     <div className={aboutMeStyles.about_me_section}>
-      <div className={aboutMeStyles.san_francisco_img}/>
-      <div className={aboutMeStyles.about_me_blurb}>
-        {'Hi, I\'m Ryan Bautista -'}
-        <br/>
-        {'incoming Software Development Engineer at Amazon.'}
-      </div>
+      {'Hi'} <span role="img" alt="waving-hand" aria-label="hidden" className={aboutMeStyles.hand_animation}>👋</span> {', I\'m Ryan Bautista -'}
+      <br/>
+      {'incoming Software Development Engineer at Amazon.'}
     </div>
   );
 };
