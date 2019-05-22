@@ -1,0 +1,24 @@
+.san_francisco_img {
+    background-image: url('../assets/images/san_francisco.jpg');
+
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about_me_section {
+    min-height: 100vh;
+}
+
+.about_me_blurb {
+    font-family: 'Raleway', sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 6em;
+    line-height: 200%;
+    font-size: calc(10px + 2vmin);
+}
