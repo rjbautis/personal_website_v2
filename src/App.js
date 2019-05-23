@@ -3,13 +3,15 @@ import appStyles from './App.module.css';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
 import Menu from './components/Menu';
+import Experience from './components/Experience';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       activeItem: 1
-    }
+    };
+    this.contentRef = React.createRef();
   }
 
   // Set menu item with key as active item
@@ -22,6 +24,12 @@ class App extends Component {
     });
   };
 
+  scrollToContent = () => {
+    if (this.contentRef.current) {
+      this.contentRef.current.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+
   render() {
     const { activeItem } = this.state;
 
@@ -29,9 +37,21 @@ class App extends Component {
       <div className={appStyles.app}>
         <Landing/>
         <div className={appStyles.san_francisco_img}/>
-        <AboutMe/>
-        <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
-        <span role="img" alt="finger-pointing-down" aria-label="hidden" className={appStyles.finger_animation}>👇</span>
+        <div ref={this.contentRef}>
+          <AboutMe/>
+          <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
+          <Experience/>
+        </div>
+        {/* eslint-disable */}
+        <span
+          role="img"
+          alt="finger-pointing-down"
+          aria-label="hidden"
+          className={appStyles.finger_animation}
+          onClick={this.scrollToContent}
+        >
+          👇
+        </span>
       </div>
     );
   }
