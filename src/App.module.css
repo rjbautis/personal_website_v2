@@ -1,12 +1,11 @@
 .app {
-  text-align: center;
 }
 
 .finger_animation {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     left: 50%;
-    margin-left: -20px;
+    margin-left: -10px;
     cursor: pointer;
     -moz-animation: bounce 3s infinite;
     -webkit-animation: bounce 3s infinite;

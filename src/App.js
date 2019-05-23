@@ -40,7 +40,7 @@ class App extends Component {
         <div ref={this.contentRef}>
           <AboutMe/>
           <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
-          <Experience/>
+          { activeItem === 1 ? <Experience/> : <div>Hi</div> }
         </div>
         {/* eslint-disable */}
         <span
