@@ -1,0 +1,20 @@
+.menu_content {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(5px + 1vmin);
+}
+
+.menu_content ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+
+.menu_item {
+    padding: 0 3rem;
+}
