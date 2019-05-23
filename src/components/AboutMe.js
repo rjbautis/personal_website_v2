@@ -14,7 +14,7 @@ const AboutMe = () => {
         👋
       </span>
       {", I'm Ryan Bautista -"}
-      <br/>
+      <br />
       {'incoming Software Development Engineer at Amazon.'}
     </div>
   );

@@ -16,7 +16,13 @@
 }
 
 
-.menu_item {
+.menu_item_inactive {
+    padding: 0 3rem;
+    opacity: 0.5;
+}
+
+.menu_item_active {
+    font-weight: bolder;
     padding: 0 3rem;
 }
 
