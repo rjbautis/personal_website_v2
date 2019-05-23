@@ -4,7 +4,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: calc(5px + 1vmin);
+    font-size: calc(8px + 2vmin);
+    padding-bottom: 20px;
 }
 
 .menu_content ul {
@@ -17,4 +18,8 @@
 
 .menu_item {
     padding: 0 3rem;
+}
+
+.menu_item_text {
+    cursor: pointer;
 }

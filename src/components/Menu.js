@@ -5,11 +5,11 @@ const Menu = () => {
   return (
     <div className={menuStyles.menu_content}>
       <ul>
-        <li>
-          <h2 className={menuStyles.menu_item}>Experience</h2>
+        <li className={menuStyles.menu_item}>
+          <span className={menuStyles.menu_item_text}>Experience</span>
         </li>
-        <li>
-          <h2 className={menuStyles.menu_item}>Projects</h2>
+        <li className={menuStyles.menu_item}>
+          <span className={menuStyles.menu_item_text}>Projects</span>
         </li>
       </ul>
     </div>
