@@ -33,6 +33,7 @@ class App extends Component {
 
   render() {
     const { activeItem } = this.state;
+    const isExperience = activeItem === 1;
 
     return (
       <div className={styles.app}>
@@ -41,7 +42,11 @@ class App extends Component {
         <div className="content" ref={this.contentRef}>
           <AboutMe/>
           <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
-          { activeItem === 1 ? <Experience/> : <Projects/> }
+          { isExperience ? (
+            <Experience/>
+          ) : (
+            <Projects/>
+          )}
         </div>
         {/* eslint-disable */}
         <span
