@@ -18,13 +18,13 @@
 
 .menu_item_inactive {
     font-weight: lighter;
-    padding: 0 3rem;
+    padding: 0 2rem;
     opacity: 0.5;
 }
 
 .menu_item_active {
     font-weight: bold;
-    padding: 0 3rem;
+    padding: 0 2rem;
 }
 
 .menu_item_text {
