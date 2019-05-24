@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import appStyles from './App.module.css';
+import styles from './App.module.css';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
 import Menu from './components/Menu';
@@ -35,9 +35,9 @@ class App extends Component {
     const { activeItem } = this.state;
 
     return (
-      <div className={appStyles.app}>
+      <div className={styles.app}>
         <Landing/>
-        <div className={appStyles.san_francisco_img}/>
+        <div className={styles.san_francisco_img}/>
         <div className="content" ref={this.contentRef}>
           <AboutMe/>
           <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
@@ -48,7 +48,7 @@ class App extends Component {
           role="img"
           alt="finger-pointing-down"
           aria-label="hidden"
-          className={appStyles.finger_animation}
+          className={styles.finger_animation}
           onClick={this.scrollToContent}
         >
           👇

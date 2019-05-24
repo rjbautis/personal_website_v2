@@ -1,5 +1,5 @@
 import React from 'react';
-import menuStyles from '../styles/Menu.module.css';
+import styles from '../styles/Menu.module.css';
 
 const Menu = props => {
   const menuItems = [
@@ -18,20 +18,20 @@ const Menu = props => {
   };
 
   return (
-    <div className={menuStyles.menu_content}>
+    <div className={styles.menu_content}>
       <ul>
         {menuItems.map(item => {
           return (
             <li
               className={
                 props.activeItem === item.key
-                  ? menuStyles.menu_item_active
-                  : menuStyles.menu_item_inactive
+                  ? styles.menu_item_active
+                  : styles.menu_item_inactive
               }
               key={item.key}
             >
               <span
-                className={menuStyles.menu_item_text}
+                className={styles.menu_item_text}
                 onClick={setParentState.bind(this, item.key)}
                 onKeyPress={() => {}}
                 tabIndex={-1}

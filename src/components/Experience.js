@@ -1,32 +1,32 @@
 import React from 'react';
-import experienceStyle from '../styles/Experience.module.css';
+import styles from '../styles/Item.module.css';
 import experienceData from '../assets/data/experienceData';
 
 const ExperienceItem = props => {
   const { company, link, imgSrc, title, duration, about } = props;
 
   return (
-    <div className={experienceStyle.experience_item}>
-      <div className={experienceStyle.experience_container}>
-        <a href={link} className={experienceStyle.experience_company}>
+    <div className={styles.item}>
+      <div className={styles.item_container}>
+        <a href={link} className={styles.item_company}>
           {company}
         </a>
         <br />
-        <span className={experienceStyle.experience_title}>{title}</span>
+        <span className={styles.item_title}>{title}</span>
         <br />
-        <span className={experienceStyle.experience_duration}>{duration}</span>
+        <span className={styles.item_duration}>{duration}</span>
       </div>
-      <div className={experienceStyle.experience_container}>
+      <div className={styles.item_container}>
         {/* eslint-disable */}
         <img
           src={require(`../assets/images/${imgSrc}`)}
           alt="dockstore"
-          className={experienceStyle.experience_img}
+          className={styles.item_img_web}
         />
       </div>
-      <div className={experienceStyle.experience_container}>
+      <div className={styles.item_container}>
         <span
-          className={experienceStyle.experience_about}
+          className={styles.item_about}
           dangerouslySetInnerHTML={{ __html: about }}
         />
       </div>
@@ -50,7 +50,7 @@ const Experience = () => {
   });
 
   return (
-    <div className={experienceStyle.experience_section}>{experienceItems}</div>
+    <div className={styles.component_section}>{experienceItems}</div>
   );
 };
 

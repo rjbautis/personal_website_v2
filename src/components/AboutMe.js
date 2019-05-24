@@ -1,15 +1,15 @@
 import React from 'react';
-import aboutMeStyles from '../styles/AboutMe.module.css';
+import styles from '../styles/AboutMe.module.css';
 
 const AboutMe = () => {
   return (
-    <div className={aboutMeStyles.about_me_section}>
+    <div className={styles.about_me_section}>
       {'Hi '}
       <span
         role="img"
         alt="waving-hand"
         aria-label="hidden"
-        className={aboutMeStyles.hand_animation}
+        className={styles.hand_animation}
       >
         👋
       </span>
