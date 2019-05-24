@@ -1,14 +1,15 @@
 .experience_section {
     font-family: 'Raleway', sans-serif;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-weight: lighter;
 }
 
 .experience_item {
     width: 100%;
+    padding-bottom: 2rem;
 }
 
 .experience_company {
@@ -18,6 +19,10 @@
 
 .experience_title {
     font-size: calc(5px + 2vmin);
+}
+
+.experience_duration {
+    font-size: calc(2px + 2vmin);
 }
 
 .experience_about {

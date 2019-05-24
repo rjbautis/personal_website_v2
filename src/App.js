@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
 import Menu from './components/Menu';
 import Experience from './components/Experience';
+import Projects from './components/Projects';
 
 class App extends Component {
   constructor() {
@@ -37,10 +38,10 @@ class App extends Component {
       <div className={appStyles.app}>
         <Landing/>
         <div className={appStyles.san_francisco_img}/>
-        <div ref={this.contentRef}>
+        <div className="content" ref={this.contentRef}>
           <AboutMe/>
           <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
-          { activeItem === 1 ? <Experience/> : <div>Hi</div> }
+          { activeItem === 1 ? <Experience/> : <Projects/> }
         </div>
         {/* eslint-disable */}
         <span

@@ -1,7 +1,7 @@
 import React from 'react';
 import menuStyles from '../styles/Menu.module.css';
 
-const Menu = (props) => {
+const Menu = props => {
   const menuItems = [
     {
       key: 1,
@@ -13,7 +13,7 @@ const Menu = (props) => {
     },
   ];
 
-  const setParentState = (key) => {
+  const setParentState = key => {
     props.setItemActive(key);
   };
 
@@ -22,13 +22,21 @@ const Menu = (props) => {
       <ul>
         {menuItems.map(item => {
           return (
-            <li className={props.activeItem === item.key ? menuStyles.menu_item_active : menuStyles.menu_item_inactive} key={item.key}>
+            <li
+              className={
+                props.activeItem === item.key
+                  ? menuStyles.menu_item_active
+                  : menuStyles.menu_item_inactive
+              }
+              key={item.key}
+            >
               <span
                 className={menuStyles.menu_item_text}
                 onClick={setParentState.bind(this, item.key)}
                 onKeyPress={() => {}}
                 tabIndex={-1}
-                role="menuitem">
+                role="menuitem"
+              >
                 {item.text}
               </span>
             </li>
