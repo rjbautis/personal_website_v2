@@ -1,27 +1,24 @@
 import React from 'react';
+import projectData from '../assets/data/projectsData'
 import styles from '../styles/Item.module.css';
-import experienceData from '../assets/data/experienceData';
 
-const ExperienceItem = props => {
-  const { company, link, imgSrc, title, duration, about } = props;
+const ProjectItem = (props) => {
+
+  const { name, link, imgSrc, about, tech, media } = props;
 
   return (
     <div className={styles.item}>
       <div className={styles.item_container}>
         <a href={link} className={styles.item_company}>
-          {company}
+          {name}
         </a>
-        <br />
-        <span className={styles.item_title}>{title}</span>
-        <br />
-        <span className={styles.item_duration}>{duration}</span>
       </div>
       <div className={styles.item_container}>
         {/* eslint-disable */}
         <img
           src={require(`../assets/images/${imgSrc}`)}
-          alt={company}
-          className={styles.item_img_web}
+          alt={name}
+          className={media === 'mobile' ? styles.item_img_mobile : styles.item_img_web}
         />
       </div>
       <div className={styles.item_container}>
@@ -34,24 +31,26 @@ const ExperienceItem = props => {
   );
 };
 
-const Experience = () => {
-  const experienceItems = experienceData.map(item => {
+const Projects = () => {
+  const projectItems = projectData.map(item => {
     return (
-      <ExperienceItem
+      <ProjectItem
         key={item.id}
-        company={item.company}
+        name={item.name}
         link={item.link}
         imgSrc={item.imgSrc}
-        title={item.title}
-        duration={item.duration}
         about={item.about}
+        tech={item.tech}
+        media={item.media}
       />
-    );
+    )
   });
 
   return (
-    <div className={styles.component_section}>{experienceItems}</div>
+    <div className={styles.component_section}>
+      { projectItems }
+    </div>
   );
 };
 
-export default Experience;
+export default Projects;

@@ -34,9 +34,10 @@
 .item_container {
     padding: 20px;
     margin: auto;
-    max-width: 50%;
+    max-width: 60%;
 }
 
+/* For mobile devices */
 @media (max-width: 600px) {
     .item_container {
         padding: 20px;
@@ -46,18 +47,27 @@
 }
 
 .item_img_web {
-    width: 100%;
+    width: 80%;
     height: auto;
+}
+
+/* For mobile devices */
+@media (max-width: 600px){
+    .item_img_web {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .item_img_mobile {
-    width: 60%;
+    width: 40%;
     height: auto;
 }
 
-@media (max-width: 600px){
+/* For mobile and tablet devices */
+@media (max-width: 1024px){
     .item_img_mobile {
-        width: 100%;
+        width: 70%;
         height: auto;
     }
 }

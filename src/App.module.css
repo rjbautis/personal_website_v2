@@ -29,11 +29,19 @@
 .san_francisco_img {
     background-image: url('./assets/images/san_francisco.jpg');
 
+    width: 100%;
     height: 500px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Turn off parallax scrolling for all tablets and phones */
+@media (max-device-width: 1024px) {
+    .san_francisco_img {
+        background-attachment: scroll;
+    }
 }
