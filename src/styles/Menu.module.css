@@ -1,11 +1,11 @@
 .menu_content {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: calc(8px + 2vmin);
-    padding-bottom: 4rem;
+    font-size: calc(10px + 1vmin);
+    padding-bottom: 6rem;
 }
 
 .menu_content ul {
@@ -17,12 +17,13 @@
 
 
 .menu_item_inactive {
+    font-weight: lighter;
     padding: 0 3rem;
     opacity: 0.5;
 }
 
 .menu_item_active {
-    font-weight: bolder;
+    font-weight: bold;
     padding: 0 3rem;
 }
 
