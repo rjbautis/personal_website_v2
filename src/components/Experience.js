@@ -49,9 +49,7 @@ const Experience = () => {
     );
   });
 
-  return (
-    <div className={styles.component_section}>{experienceItems}</div>
-  );
+  return <div className={styles.component_section}>{experienceItems}</div>;
 };
 
 export default Experience;

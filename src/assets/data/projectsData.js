@@ -7,7 +7,7 @@ const projects = [
     about:
       'A cross-platform mobile application built with Flutter and designed for artists to share their work with a global network of journalists and art fans.',
     tech: ['flutter', 'firebase', 'android_studios', 'xcode'],
-    media: 'mobile'
+    media: 'mobile',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     about:
       'A Facebook Messenger Bot powered by Node.js that dynamically interacts with users to offer movie recommendations.',
     tech: ['nodejs', 'express', 'dialogflow', 'heroku', 'the_movie_db'],
-    media: 'mobile'
+    media: 'mobile',
   },
 ];
 

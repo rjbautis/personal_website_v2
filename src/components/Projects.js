@@ -1,9 +1,8 @@
 import React from 'react';
-import projectData from '../assets/data/projectsData'
+import projectData from '../assets/data/projectsData';
 import styles from '../styles/Item.module.css';
 
-const ProjectItem = (props) => {
-
+const ProjectItem = props => {
   const { name, link, imgSrc, about, tech, media } = props;
 
   return (
@@ -18,7 +17,9 @@ const ProjectItem = (props) => {
         <img
           src={require(`../assets/images/${imgSrc}`)}
           alt={name}
-          className={media === 'mobile' ? styles.item_img_mobile : styles.item_img_web}
+          className={
+            media === 'mobile' ? styles.item_img_mobile : styles.item_img_web
+          }
         />
       </div>
       <div className={styles.item_container}>
@@ -43,14 +44,10 @@ const Projects = () => {
         tech={item.tech}
         media={item.media}
       />
-    )
+    );
   });
 
-  return (
-    <div className={styles.component_section}>
-      { projectItems }
-    </div>
-  );
+  return <div className={styles.component_section}>{projectItems}</div>;
 };
 
 export default Projects;
