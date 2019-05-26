@@ -6,10 +6,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.important {
-    font-family: 'Caveat', cursive;
-}
-
 *:focus {
     outline: none;
 }

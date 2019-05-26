@@ -16,7 +16,7 @@ const ProjectItem = props => {
         {/* eslint-disable */}
         <img
           src={require(`../assets/images/${imgSrc}`)}
-          alt={name}
+          alt={imgSrc}
           className={
             media === 'mobile' ? styles.item_img_mobile : styles.item_img_web
           }

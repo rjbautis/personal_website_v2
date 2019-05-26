@@ -1,5 +1,4 @@
 import React from 'react';
-import resume from '../assets/files/RyanBautista_Resume.pdf';
 import styles from '../styles/AboutMe.module.css';
 import icons from '../styles/icons.module.css';
 
@@ -17,7 +16,7 @@ const AboutMe = () => {
       </span>
       {", I'm Ryan Bautista -"}
       <br />
-      {'incoming Software Development Engineer at Amazon.'}
+      {'incoming Software Development Engineer at Amazon'}
       <div className={icons.container}>
         <ul>
           <li>
@@ -38,7 +37,7 @@ const AboutMe = () => {
         </ul>
       </div>
       <div className={icons.container}>
-        <a className={icons.btn} href={resume}>
+        <a className={icons.btn} href='./RyanBautista_Resume.pdf'>
           <span>Resume</span>
         </a>
       </div>
