@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 import styles from '../styles/AboutMe.module.css';
 import icons from '../styles/icons.module.css';
 
@@ -21,17 +25,17 @@ const AboutMe = () => {
         <ul>
           <li>
             <a href="https://github.com/rjbautis">
-              <span className={icons.github} />
+              <FontAwesomeIcon icon={faGithub} size='2x' />
             </a>
           </li>
           <li>
             <a href="https://linkedin.com/in/ryan-j-bautista/">
-              <span className={icons.linkedin} />
+              <FontAwesomeIcon icon={faLinkedin} size='2x' />
             </a>
           </li>
           <li>
             <a href="mailto:rjbautis1@gmail.com">
-              <span className={icons.email} />
+              <FontAwesomeIcon icon={faEnvelope} size='2x' />
             </a>
           </li>
         </ul>
