@@ -2,7 +2,7 @@
   "name": "personal_website_v2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rjbautis.github.io/",
+  "homepage": "https://rjbautis.github.io/personal_website_v2",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-brands-svg-icons": "^5.8.2",
@@ -17,7 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "prettier": "prettier --single-quote --trailing-comma es5 --write src/**/*.js src/assets/data/*.js",
     "lint": "eslint src"
