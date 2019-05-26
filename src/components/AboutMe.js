@@ -1,8 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/AboutMe.module.css';
 import icons from '../styles/icons.module.css';
 
@@ -25,23 +24,23 @@ const AboutMe = () => {
         <ul>
           <li>
             <a href="https://github.com/rjbautis">
-              <FontAwesomeIcon icon={faGithub} size='2x' />
+              <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </li>
           <li>
             <a href="https://linkedin.com/in/ryan-j-bautista/">
-              <FontAwesomeIcon icon={faLinkedin} size='2x' />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
           </li>
           <li>
             <a href="mailto:rjbautis1@gmail.com">
-              <FontAwesomeIcon icon={faEnvelope} size='2x' />
+              <FontAwesomeIcon icon={faEnvelope} size="2x" />
             </a>
           </li>
         </ul>
       </div>
       <div className={icons.container}>
-        <a className={icons.btn} href='./RyanBautista_Resume.pdf'>
+        <a className={icons.btn} href="./RyanBautista_Resume.pdf">
           <span>Resume</span>
         </a>
       </div>

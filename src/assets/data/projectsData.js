@@ -24,10 +24,11 @@ const projects = [
     name: 'FooGo',
     link: 'https://github.com/rjbautis/FooGo',
     imgSrc: 'monitor_foogo.png',
-    about: 'A single-page food ordering platform built with Vue.js & web2py, and designed for student users seeking out-of-town food delivery services from driver users.',
+    about:
+      'A single-page food ordering platform built with Vue.js & web2py, and designed for student users seeking out-of-town food delivery services from driver users.',
     tech: ['vue_js', 'web2py', 'bootstrap'],
-    media: 'web'
-  }
+    media: 'web',
+  },
 ];
 
 export default projects;

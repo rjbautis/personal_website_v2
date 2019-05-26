@@ -3,7 +3,7 @@ import projectData from '../assets/data/projectsData';
 import styles from '../styles/Item.module.css';
 
 const ProjectItem = props => {
-  const { name, link, imgSrc, about, tech, media } = props;
+  const { name, link, imgSrc, about, media } = props;
 
   return (
     <div className={styles.item}>
