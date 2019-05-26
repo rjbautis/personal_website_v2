@@ -2,4 +2,6 @@
 
 
 # Personal Website v2
-A personal website built with React
+A personal website built with ReactJS.
+
+Viewable at [ryanbautista.me](https://ryanbautista.me)
