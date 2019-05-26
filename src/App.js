@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 import styles from './App.module.css';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
@@ -42,11 +43,17 @@ class App extends Component {
         <div className="content" ref={this.contentRef}>
           <AboutMe/>
           <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
-          { isExperience ? (
-            <Experience/>
-          ) : (
-            <Projects/>
-          )}
+          <CSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            { isExperience ? (
+              <Experience key="experience_component"/>
+            ) : (
+              <Projects key="projects_component"/>
+            )}
+          </CSSTransitionGroup>
         </div>
         {/* eslint-disable */}
         <span
