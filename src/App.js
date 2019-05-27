@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import { CSSTransitionGroup } from 'react-transition-group';
 import styles from './App.module.css';
 import Landing from './components/Landing';
@@ -14,6 +15,9 @@ class App extends Component {
       activeItem: 1
     };
     this.contentRef = React.createRef();
+
+    ReactGA.initialize('UA-140860145-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   // Set menu item with key as active item
