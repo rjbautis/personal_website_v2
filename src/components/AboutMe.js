@@ -23,17 +23,20 @@ const AboutMe = () => {
       <div className={icons.container}>
         <ul>
           <li>
-            <a href="https://github.com/rjbautis">
+            <a href="https://github.com/rjbautis" aria-label="Github">
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/ryan-j-bautista/">
+            <a
+              href="https://linkedin.com/in/ryan-j-bautista/"
+              aria-label="LinkedIn"
+            >
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
           </li>
           <li>
-            <a href="mailto:rjbautis1@gmail.com">
+            <a href="mailto:rjbautis1@gmail.com" aria-label="Email">
               <FontAwesomeIcon icon={faEnvelope} size="2x" />
             </a>
           </li>
