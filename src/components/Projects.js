@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from 'react-slick';
 import projectData from '../assets/data/projectsData';
 import styles from '../styles/Item.module.css';
 
@@ -14,13 +15,22 @@ const ProjectItem = props => {
       </div>
       <div className={styles.item_container}>
         {/* eslint-disable */}
-        <img
-          src={require(`../assets/images/${imgSrc}`)}
-          alt={imgSrc}
-          className={
-            media === 'mobile' ? styles.item_img_mobile : styles.item_img_web
-          }
-        />
+        <Slider dots={true} speed={500} slidesToShow={1} slidesToScroll={1}>
+          {imgSrc.map(image => {
+            return (
+              <img
+                key={image}
+                src={require(`../assets/images/${image}`)}
+                alt={name}
+                className={
+                  media === 'mobile'
+                    ? styles.item_img_mobile
+                    : styles.item_img_web
+                }
+              />
+            );
+          })}
+        </Slider>
       </div>
       <div className={styles.item_container}>
         <span
