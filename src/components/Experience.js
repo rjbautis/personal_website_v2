@@ -1,5 +1,4 @@
 import React from 'react';
-import Slider from 'react-slick';
 import styles from '../styles/Item.module.css';
 import experienceData from '../assets/data/experienceData';
 
@@ -19,18 +18,16 @@ const ExperienceItem = props => {
       </div>
       <div className={styles.item_container}>
         {/* eslint-disable */}
-        <Slider dots={true} speed={500} slidesToShow={1} slidesToScroll={1}>
-          {imgSrc.map(image => {
-            return (
-              <img
-                key={image}
-                src={require(`../assets/images/${image}`)}
-                alt={company}
-                className={styles.item_img_web}
-              />
-            );
-          })}
-        </Slider>
+        {imgSrc.map(image => {
+          return (
+            <img
+              key={image}
+              src={require(`../assets/images/${image}`)}
+              alt={company}
+              className={styles.item_img_web}
+            />
+          );
+        })}
       </div>
       <div className={styles.item_container}>
         <span
