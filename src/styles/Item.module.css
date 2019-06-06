@@ -47,27 +47,28 @@
 }
 
 .item_img_web {
-    width: 80%;
+    width: 80% !important;
     height: auto;
 }
 
 /* For mobile devices */
 @media (max-width: 600px){
     .item_img_web {
-        width: 100%;
+        width: 95% !important;
         height: auto;
     }
 }
 
 .item_img_mobile {
-    width: 40%;
+    width: 40% !important;
+    max-height: 650px;
     height: auto;
 }
 
 /* For mobile and tablet devices */
 @media (max-width: 1024px){
     .item_img_mobile {
-        width: 70%;
+        width: 70% !important;
         height: auto;
     }
 }

@@ -33,3 +33,14 @@ a, a:visited, a:hover, a:focus {
     opacity: 0.01;
     transition: opacity 300ms ease-in;
 }
+
+.slick-prev:before,
+.slick-next:before {
+    color: #282c34 !important;
+}
+
+@media (max-width: 600px){
+    .slick-arrow {
+        display: none !important;
+    }
+}

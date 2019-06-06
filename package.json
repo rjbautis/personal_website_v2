@@ -11,6 +11,7 @@
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",
     "react-scripts": "3.0.1",
+    "react-slick": "^0.24.0",
     "react-transition-group": "^1.2.1"
   },
   "scripts": {

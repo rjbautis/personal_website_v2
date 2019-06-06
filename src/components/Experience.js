@@ -18,11 +18,16 @@ const ExperienceItem = props => {
       </div>
       <div className={styles.item_container}>
         {/* eslint-disable */}
-        <img
-          src={require(`../assets/images/${imgSrc}`)}
-          alt={company}
-          className={styles.item_img_web}
-        />
+        {imgSrc.map(image => {
+          return (
+            <img
+              key={image}
+              src={require(`../assets/images/${image}`)}
+              alt={company}
+              className={styles.item_img_web}
+            />
+          );
+        })}
       </div>
       <div className={styles.item_container}>
         <span
