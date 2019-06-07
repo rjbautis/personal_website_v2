@@ -19,7 +19,7 @@ const AboutMe = () => {
       </span>
       {", I'm Ryan Bautista -"}
       <br />
-      {'incoming Software Development Engineer at Amazon'}
+      {'incoming Software Development Engineer'}
       <div className={icons.container}>
         <ul>
           <li>
