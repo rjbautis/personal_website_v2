@@ -6,7 +6,7 @@ const experience = [
     imgSrc: ['web_dockstore.png'],
     title: 'Undergraduate Research Assistant',
     duration: 'Sept 2018 - June 2019',
-    about: `Contributing towards the full-stack web development of <a href="https://dockstore.org">Dockstore</a>, an open-source bioinformatics platform built with Angular 2 for sharing Docker-based tools and workflows.`,
+    about: `Contributed towards the full-stack web development of <a href="https://dockstore.org">Dockstore</a>, an open-source bioinformatics platform built with Angular 2 for sharing Docker-based tools and workflows.`,
   },
 ];
 
