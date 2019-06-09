@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <Landing/>
-        <div className={styles.san_francisco_img}/>
+        <div className={styles.banner_img}/>
         <div className="content" ref={this.contentRef}>
           <AboutMe/>
           <Menu setItemActive={this.setItemActive} activeItem={activeItem}/>
