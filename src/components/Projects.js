@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import projectData from '../assets/data/projectsData';
 import styles from '../styles/Item.module.css';
@@ -49,24 +49,26 @@ const ProjectItem = props => {
   );
 };
 
-class Projects extends Component {
-  componentDidMount() {
-    window.addEventListener('touchstart', this.recordFirstTouch);
-    window.addEventListener('touchmove', this.preventMove, { passive: false });
-  }
+const Projects = () => {
+  const [firstClientX, setFirstClientX] = useState(null);
 
-  componentWillUnmount() {
-    window.removeEventListener('touchstart', this.recordFirstTouch);
-    window.removeEventListener('touchmove', this.preventMove);
-  }
+  useEffect(() => {
+    window.addEventListener('touchstart', recordFirstTouch);
+    window.addEventListener('touchmove', preventMove, { passive: false });
 
-  recordFirstTouch = e => {
-    this.firstClientX = e.touches[0].clientX;
+    return () => {
+      window.removeEventListener('touchstart', recordFirstTouch);
+      window.removeEventListener('touchmove', preventMove);
+    };
+  });
+
+  const recordFirstTouch = e => {
+    setFirstClientX(e.touches[0].clientX);
   };
 
-  preventMove = e => {
+  const preventMove = e => {
     const threshold = 10;
-    const clientX = e.touches[0].clientX - this.firstClientX;
+    const clientX = e.touches[0].clientX - firstClientX;
 
     // If user scrolls horizontally past the threshold, then prevent vertical scroll movement
     if (Math.abs(clientX) > threshold) {
@@ -78,23 +80,21 @@ class Projects extends Component {
     return true;
   };
 
-  render() {
-    const projectItems = projectData.map(item => {
-      return (
-        <ProjectItem
-          key={item.id}
-          name={item.name}
-          link={item.link}
-          imgSrc={item.imgSrc}
-          about={item.about}
-          tech={item.tech}
-          media={item.media}
-        />
-      );
-    });
+  const projectItems = projectData.map(item => {
+    return (
+      <ProjectItem
+        key={item.id}
+        name={item.name}
+        link={item.link}
+        imgSrc={item.imgSrc}
+        about={item.about}
+        tech={item.tech}
+        media={item.media}
+      />
+    );
+  });
 
-    return <div className={styles.component_section}>{projectItems}</div>;
-  }
-}
+  return <div className={styles.component_section}>{projectItems}</div>;
+};
 
 export default Projects;
